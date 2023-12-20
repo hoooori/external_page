@@ -18,16 +18,18 @@
   </div>
   <script async type="text/javascript" src="https://hori-test8.liez.jp/p/x4Y8lCkY/main.js"></script>
   <script type="text/javascript">
-    (function () {
-      var b = "come-back",
-        a = !1;
-      document.addEventListener("visibilitychange", function () {
-        "hidden" === document.visibilityState && (a = !0);
-        "visible" === document.visibilityState &&
-          a &&
-          alert("visibilitychange trigger")
-      });
-    })();
+    document.addEventListener("DOMContentLoaded", (event) => {
+      (function () {
+        var b = "come-back",
+          a = !1;
+        document.addEventListener("visibilitychange", function () {
+          "hidden" === document.visibilityState && (a = !0);
+          "visible" === document.visibilityState &&
+            a &&
+            showPopup(b)
+        });
+      })();
+    });
   </script>
 </body>
 </html>
